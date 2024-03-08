@@ -41,7 +41,7 @@ while(True):
         #recognize? this is not a deep learning model prediction like keras, tensorflow, pytorch, scikit learn
         id_, conf = recognizer.predict(roi_gray)
         print(conf)
-        if conf >= 35 and conf <= 85:
+        if conf >= 35 and conf <= 70:
             #print(id_)
             print(labels[id_])
             font = cv2.FONT_HERSHEY_SIMPLEX

@@ -3,7 +3,10 @@ tofix.txt
 my-image.png
 detected-image.png
 images/*
+!images/test.txt
 testimages/*
+!testimages/test.txt
+reserve
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
