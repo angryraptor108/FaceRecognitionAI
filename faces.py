@@ -18,12 +18,26 @@ while(True):
     for (x, y, w, h) in faces:
         print(x, y, w, h)
         roi_gray = gray[y:y+h, x:x+w] # (ycord_start, ycord_end)
+        roi_colour = frame[y:y+h, x:x+w]
+
+        #recognize?
+
+        img_item = "my-image.png"
+        cv2.imwrite(img_item, roi_gray)
+
+        colour = (255, 0, 0) # BGR 0-255
+        stroke = 2
+        end_cord_x = x + w
+        end_cord_y = y + h
+        cv2.rectangle(frame, (x, y), (end_cord_x, end_cord_y), colour, stroke)
+
 
 
     # display the resulting frame
+    frame = cv2.flip(frame, 1)
     cv2.imshow('chinmay camera feed', frame)
 
-    if cv2.waitKey(1000) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
 # when everything done, release the capture
