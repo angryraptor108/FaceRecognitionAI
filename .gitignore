@@ -1,6 +1,9 @@
 .venv/
 tofix.txt
 my-image.png
+detected-image.png
+images/*
+testimages/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
