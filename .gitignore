@@ -7,8 +7,8 @@ images/*
 testimages/*
 !testimages/test.txt
 reserve
-labels.pickle
-trainer.yml
+*labels.pickle
+*trainer.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
